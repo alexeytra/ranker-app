@@ -3,8 +3,24 @@
   "version": "1.0.0",
   "description": "just pet app in react, nestjs, redis",
   "main": "index.js",
+  "workspaces": [
+    "client",
+    "server"
+  ],
   "scripts": {
+    "docker:compose": "docker-compose up -d",
+    "client:dev": "npm run dev --workspace=client",
+    "server:dev": "npm run start:dev --workspace=server",
+    "start": "concurrently 'npm:docker:compose' 'npm:server:dev' 'npm:client:dev'",
+    "storybook": "npm run storybook --workspace=client",
+    "stop": "docker-compose down",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/webpack": "^5.28.0",
+    "concurrently": "^7.0.0",
+    "prettier": "^2.5.1",
+    "wait-on": "^6.0.1"
   },
   "author": "Alexey Trapeznikov",
   "license": "ISC"
