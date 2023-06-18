@@ -1,0 +1,11 @@
+{
+  "name": "rank-app",
+  "version": "1.0.0",
+  "description": "just pet app in react, nestjs, redis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexey Trapeznikov",
+  "license": "ISC"
+}
