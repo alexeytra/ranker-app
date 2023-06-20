@@ -23,5 +23,8 @@
     "wait-on": "^6.0.1"
   },
   "author": "Alexey Trapeznikov",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs/config": "^3.0.0"
+  }
 }
