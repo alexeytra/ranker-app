@@ -26,6 +26,7 @@
   "license": "ISC",
   "dependencies": {
     "@nestjs/config": "^3.0.0",
-    "class-validator": "^0.14.0"
+    "class-validator": "^0.14.0",
+    "nanoid": "^3.3.6"
   }
 }
