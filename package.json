@@ -5,10 +5,11 @@
   "main": "index.js",
   "workspaces": [
     "client",
-    "server"
+    "server",
+    "shared"
   ],
   "scripts": {
-    "docker:compose": "docker-compose up -d",
+    "docker:compose": "docker compose up -d",
     "client:dev": "npm run dev --workspace=client",
     "server:dev": "npm run start:dev --workspace=server",
     "start": "concurrently 'npm:docker:compose' 'npm:server:dev' 'npm:client:dev'",
@@ -25,8 +26,6 @@
   "author": "Alexey Trapeznikov",
   "license": "ISC",
   "dependencies": {
-    "@nestjs/config": "^3.0.0",
-    "class-validator": "^0.14.0",
-    "nanoid": "^3.3.6"
+    "@nestjs/config": "^3.0.0"
   }
 }
